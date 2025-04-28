@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(to bottom, #050d2e, #0b1a45);
+  color: #e0e0e0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  width: 100%;
+  background-color: rgba(5, 13, 46, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #00d9ff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+.tela {
+  width: 100%;
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.foto {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid #00d9ff;
+  object-fit: cover;
+}
+
+.typed-text {
+  width: 400px;
+  white-space: pre;
+  overflow: hidden;
+  border-right: 5px solid #00d9ff;
+  font-size: 28px;
+  animation: typing 3s steps(22), blink 0.7s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 70%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+p {
+  max-width: 600px;
+  font-size: 19px;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills li {
+  background-color: rgba(0, 217, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.botoes {
+  margin-top: 20px;
+}
+
+.botao {
+  background-color: rgba(0, 217, 255, 0.7);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.botao:hover {
+  background-color: #00d9ff;
+}
+
+@media (max-width: 768px) {
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  .foto {
+    width: 120px;
+    height: 120px;
+  }
+
+  .typed-text {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typed-text {
+    font-size: 21px;
+  }
+
+  .foto-grande {
+    width: 100px;
+    height: 100px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 5px 10px;
+  }
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding: 32px;
+}
+
+.foto-sobre img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00bcd4;
+}
+
+.tela-sobre {
+  padding: 50px 50px;
+}
+
+.descricao-sobre {
+  max-width: 600px;
+  color: #fff;
+  margin-top: 150px;
+}
+
+.descricao-sobre p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.tags {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tag-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #0077b6;
+  padding: 8px 16px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.destaque {
+  color: #00bcd4;
+  font-weight: bold;
+  font-size: 21px;
+  background-color: #021f34;
+  padding: 3px 10px;
+  border-radius: 8px;
+}
+
+#projetos p,
+#contato p {
+  font-size: 18px;
+  margin-top: 16px;
+}
+
+#contato .botao {
+  margin-top: 20px;
+}
